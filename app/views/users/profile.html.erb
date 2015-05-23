@@ -1,26 +1,44 @@
+<meta name="viewport" content="width=550, initial-scale=1">
+<div class="container">
+  <div class="row">
+    <div class="twelve column">
+      <p>
+        YOU ARE NOW SIGNED IN.....
+      </p>
+        <h2>Welcome back to the site <%= @user.username %></h2>
+    </div>
+  </div>
+</div>
 
-<h2>Welcome back to the site <%= @user.username %></h2>
+<div class="container">
+  <div class="row">
+    <div class="twelve column">
+        <ul>
+          <% @user.squeaks.each do |squeak| %>
+          <li>
+            <%= form_tag("/squeaks/#{ squeak.id }", method: :delete) do %>
+            <%= submit_tag "UnSqueak" %>
+            <% end %>
+            <%= squeak.message %>
+          </li>
+          <% end %>
+        </ul>
+      </div>
+    </div>
+</div>
 
-<ul>
-  <% @user.squeaks.each do |squeak| %>
-  <li>
-    <%= form_tag("/squeaks/#{ squeak.id }", method: :delete) do %>
-    <%= submit_tag "UnSqueak" %>
-    <% end %>
-    <%= squeak.message %>
-  </li>
-  <% end %>
-</ul>
-<%= form_tag('/log_out', method: :delete) do %>
-  <% submit_tag "Log-Out" %>
-  <% end %>
+<div class="container">
+  <div class="row">
+    <div class="twelve column">
+      <%= form_tag('/log_out', method: :delete) do %>
+        <% submit_tag "Log-Out" %>
+      <% end %>
 
-  <%= form_for @squeak do |f|%>
-    <%= f.label :message %>
-    <%= f.text_field :message %>
-    <%= f.submit %>
-  <% end %>
-
-  <p>
-    YOU ARE NOW SIGNED IN.....
-  </p>
+      <%= form_for @squeak do |f|%>
+        <%= f.label :message %>
+        <%= f.text_field :message %>
+        <%= f.submit %>
+      <% end %>
+    </div>
+  </div>
+</div>
