@@ -3,6 +3,7 @@ class CreateSqueaks < ActiveRecord::Migration
     create_table :squeaks do |t|
       t.string :message
       t.references :user, index: true, foreign_key: true
+      
 
       t.timestamps null: false
     end

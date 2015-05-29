@@ -15,7 +15,7 @@ class SqueaksController < ApplicationController
   private
 
   def squeak_params
-    params.require(:squeak).permit(:message)
+    params.require(:squeak).permit(:message, :image)
   end
 
 end
