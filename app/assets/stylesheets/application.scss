@@ -21,9 +21,31 @@ body {
   // background-image: url('http://wall4all.me/thumbs/cars/mc-escher-birds-885377-480x320.jpg');
   background-repeat: no-repeat;
   background-size: cover;
-  color: black;
+  background-color: white;
 }
 
+form {
+  display: inline;
+}
+
+.squeak {
+//
+  width: 2em;
+  text-align: center;
+  border: 2px black solid;
+  border-radius: 10px;
+  padding: 10px;
+
+}
+
+br:nth-child(odd){
+  background: green;
+
+}
+
+br:nth-child(even) {
+  background: blue;
+}
 /* Mobile first queries */
 
 /* Larger than mobile */

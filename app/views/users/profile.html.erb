@@ -6,33 +6,78 @@
         YOU ARE NOW SIGNED IN.....
       </p>
         <h2>Welcome back to the site <%= @user.username %></h2>
+
+        <div class="container">
+          <div class="row">
+            <div class="twelve column">
+              <%= form_tag('/log_out', method: :delete) do %>
+                <% submit_tag "Log-Out" %>
+              <% end %>
     </div>
   </div>
 </div>
 
-<div class="container">
-  <div class="row">
-    <div class="twelve column">
-        <ul>
-          <% @user.squeaks.each do |squeak| %>
-          <li>
-            <%= form_tag("/squeaks/#{ squeak.id }", method: :delete) do %>
-            <%= submit_tag "UnSqueak" %>
-            <% end %>
-            <%= squeak.message %>
-          </li>
-          <% end %>
-        </ul>
-      </div>
+<div id="wrapper" class="container">
+
+  <div class="nav-top row">
+      <div></div>
     </div>
-</div>
+  </div>
 
 <div class="container">
   <div class="row">
-    <div class="twelve column">
-      <%= form_tag('/log_out', method: :delete) do %>
-        <% submit_tag "Log-Out" %>
-      <% end %>
+
+    <div class="squeaks-pane nine columns">
+      <div id="squeaks-container">
+        <div class="squeak">
+        <% @user.squeaks.each do |squeak| %>
+            <%= squeak.message %><br>
+            <% end %>
+          </div>
+        </div>
+        </div>
+
+    <div class="unsqueaks-pane two columns">
+      <div id="unsqueaks-container">
+        <div class="squeak">
+        <% @user.squeaks.each do |squeak| %>
+        <%= form_tag("/squeaks/#{ squeak.id }", method: :delete) do %>
+        <%= submit_tag "UnSqueak" %><br>
+        <% end %>
+        <% end %>
+        </div>
+        </div>
+        </div>
+
+</div>
+</div>
+<!--
+            <div class="twelve column">
+                <% @user.squeaks.each do |squeak| %>
+                    <%= squeak.message %>
+                    <%= form_tag("/squeaks/#{ squeak.id }", method: :delete) do %>
+                    <%= submit_tag "UnSqueak" %><br>
+                    <% end %>
+                <% end %>
+            </div>
+          </div>
+      </div> -->
+<!--
+<div class="container">
+  <div class="row">
+      <div class="twelve column">
+          <% @user.squeaks.each do |squeak| %>
+              <%= squeak.message %>
+              <%= form_tag("/squeaks/#{ squeak.id }", method: :delete) do %>
+              <%= submit_tag "UnSqueak" %><br>
+              <% end %>
+          <% end %>
+      </div>
+    </div>
+</div> -->
+
+
+
 
       <%= form_for @squeak do |f|%>
         <%= f.label :message %>
