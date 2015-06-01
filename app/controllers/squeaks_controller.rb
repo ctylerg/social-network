@@ -1,5 +1,6 @@
 class SqueaksController < ApplicationController
 
+
   def create
     squeak = Squeak.create( squeak_params )
     squeak.user = current_user

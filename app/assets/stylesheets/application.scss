@@ -27,7 +27,13 @@ body {
 form {
   display: inline;
 }
+h5 {
+  float: left;
+}
 
+// input[type="submit"]{
+//   float: right;
+// }
 .squeak {
 //
   width: 2em;
@@ -36,6 +42,11 @@ form {
   border-radius: 10px;
   padding: 10px;
 
+}
+
+
+.squeak-image{
+  width: 150px;
 }
 
 br:nth-child(odd){

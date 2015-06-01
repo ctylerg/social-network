@@ -26,12 +26,12 @@
 
 <div class="container">
   <div class="row">
-
+<!--
     <div class="squeaks-pane nine columns">
       <div id="squeaks-container">
         <div class="squeak">
         <% @user.squeaks.each do |squeak| %>
-            <%= squeak.message %><br>
+            <h5><%= squeak.message %></h5>
             <% end %>
           </div>
         </div>
@@ -47,7 +47,7 @@
         <% end %>
         </div>
         </div>
-        </div>
+        </div> -->
 
 </div>
 </div>
@@ -62,28 +62,42 @@
             </div>
           </div>
       </div> -->
-<!--
+
 <div class="container">
   <div class="row">
-      <div class="twelve column">
-          <% @user.squeaks.each do |squeak| %>
+      <div class="twelve columns">
+        <ul>
+
+        <% @user.squeaks.order(:created_at).reverse.each do |squeak| %>
+          <div class="row">
+
+            <div class="three columns">
               <%= squeak.message %>
+            </div>
+
+            <div class="three columns">
+              <img src="<%= squeak.image %>" class='squeak-image'/>
+            </div>
+
+            <div class="two columns">
               <%= form_tag("/squeaks/#{ squeak.id }", method: :delete) do %>
-              <%= submit_tag "UnSqueak" %><br>
+                <%= submit_tag "UnSqueak" %><br>
               <% end %>
-          <% end %>
+            </div>
+
+          </div>
+        <% end %>
+      </ul>
       </div>
     </div>
-</div> -->
-
-
-
+</div>
 
       <%= form_for @squeak do |f|%>
         <%= f.label :message %>
         <%= f.text_field :message %>
         <%= f.label :image %>
-        <%= f.text_field :image %>
+        <%= f.file_field :file, id: 'file' %>
+        <%= f.hidden_field :image, id: 'image' %>
         <%= f.submit %>
       <% end %>
     </div>

@@ -9,11 +9,11 @@ class UsersController < ApplicationController
   end
 
   def new
-  @user = User.new
+    @user = User.new
   end
   def create
-  user = User.create( user_params )
-  redirect_to "/users/#{ user.id }"
+    user = User.create( user_params )
+    redirect_to "/users/#{ user.id }"
   end
 
   def edit
