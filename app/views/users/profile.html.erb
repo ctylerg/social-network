@@ -22,7 +22,16 @@
       <div></div>
     </div>
   </div>
-
+  <div>
+      <%= form_for @squeak do |f|%>
+        <%= f.label :message %>
+        <%= f.text_field :message %>
+        <%= f.label :image %>
+        <%= f.file_field :file, id: 'file' %>
+        <%= f.hidden_field :image, id: 'image' %>
+        <%= f.submit %>
+      <% end %>
+    </div>
 <div class="container">
   <div class="row">
 <!--
@@ -90,14 +99,5 @@
       </div>
     </div>
 </div>
-  <div>
-      <%= form_for @squeak do |f|%>
-        <%= f.label :message %>
-        <%= f.text_field :message %>
-        <%= f.label :image %>
-        <%= f.file_field :file, id: 'file' %>
-        <%= f.hidden_field :image, id: 'image' %>
-        <%= f.submit %>
-      <% end %>
-    </div>
+
 </body>
