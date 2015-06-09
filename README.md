@@ -1,12 +1,35 @@
-# social-network
-twitter-like
+# a social-network
+*It's Twitter-like*
+
+An exclusive social media app.  Users can create an unique user, sign in and post/create/delete posts.  Users also have the option to post pictures.
+
+#Technologies
+- Ruby on Rails
+- Ruby
+- Javascript
+- jQuery
+- Authentication
+- Base 64
+- ActiveRecord
+- Skeleton
 
 
-Users can create an unique user, sign in and post/create/delete posts.
 
-Add pics?
+##Screenshots
+![Post a Message](/App/assets/images/Profile.png)
 
-Here is some cool code that I to bring images in so that they could be posted.  It took some work but was well worth it.
+
+![Sign in!](/App/assets/images/Sign-In.png)
+
+#Version 2.0
+- location map to show your posts
+- more security
+- link to friends posts
+
+##Code
+(the real reason you have scrolled this far down)
+
+Here is some cool code to bring images in, so that they could be posted.  It took some work but was well worth it.
 ```ruby
 var reader = new FileReader();
 reader.onload = function (event) {
@@ -29,4 +52,10 @@ $(document).ready(function(){
 });
 ```
 
-Skeleton framework was used for a unified look across the app.
+
+
+
+
+
+#Author
+[Tyler Geneva](https://github.com/ctylerg)
