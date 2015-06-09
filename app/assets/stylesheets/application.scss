@@ -16,12 +16,18 @@
 
  @import 'skeleton.scss';
 
+.profileLogOut {
+  float: right;
+  display: block;
+  color: lightblue !important;
+  background-color: grey !important;
+}
 
 body {
   // background-image: url('http://wall4all.me/thumbs/cars/mc-escher-birds-885377-480x320.jpg');
   background-repeat: no-repeat;
   background-size: cover;
-  background-color: white;
+  background-color: darkgrey;
 }
 
 form {
@@ -42,8 +48,13 @@ h5 {
   border-radius: 10px;
   padding: 10px;
 
+
 }
 
+.delete {
+  color: lightblue !important;
+  background-color: grey !important;
+}
 
 .squeak-image{
   width: 150px;

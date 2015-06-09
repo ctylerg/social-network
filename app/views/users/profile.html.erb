@@ -1,21 +1,20 @@
 <meta name="viewport" content="width=550, initial-scale=1">
-<div class="container">
+<body id='profilePage'>
   <div class="row">
-    <div class="twelve column">
+<nav class = "twelve columns profileNav"
+
+        <%= form_tag('/log_out', method: :delete) do %>
+        <% submit_tag "Log-Out", :class => "profileLogOut"%>
+        <% end %>
+
       <p>
         YOU ARE NOW SIGNED IN.....
       </p>
-        <h2>Welcome back to the site <%= @user.username %></h2>
+      <h2>Welcome back to the site <%= @user.username %></h2>
 
-        <div class="container">
-          <div class="row">
-            <div class="twelve column">
-              <%= form_tag('/log_out', method: :delete) do %>
-                <% submit_tag "Log-Out" %>
-              <% end %>
-    </div>
-  </div>
-</div>
+
+      </nav>
+        </div>
 
 <div id="wrapper" class="container">
 
@@ -79,9 +78,9 @@
               <img src="<%= squeak.image %>" class='squeak-image'/>
             </div>
 
-            <div class="two columns">
+            <div class= "two columns">
               <%= form_tag("/squeaks/#{ squeak.id }", method: :delete) do %>
-                <%= submit_tag "UnSqueak" %><br>
+                <%= submit_tag "UnSqueak", :class => "delete"%><br>
               <% end %>
             </div>
 
@@ -91,7 +90,7 @@
       </div>
     </div>
 </div>
-
+  <div>
       <%= form_for @squeak do |f|%>
         <%= f.label :message %>
         <%= f.text_field :message %>
@@ -101,5 +100,4 @@
         <%= f.submit %>
       <% end %>
     </div>
-  </div>
-</div>
+</body>
