@@ -4,7 +4,7 @@
 <nav class = "twelve columns profileNav"
 
         <%= form_tag('/log_out', method: :delete) do %>
-        <% submit_tag "Log-Out", :class => "profileLogOut"%>
+        <% submit_tag "Log-Out", :class => "profileLogOut" %>
         <% end %>
 
       <p>
@@ -16,11 +16,11 @@
       </nav>
         </div>
 
-<div id="wrapper" class="container">
+  <div id="wrapper" class="container">
 
   <div class="nav-top row">
       <div></div>
-    </div>
+  </div>
   </div>
   <div>
       <%= form_for @squeak do |f|%>
@@ -29,9 +29,9 @@
         <%= f.label :image %>
         <%= f.file_field :file, id: 'file' %>
         <%= f.hidden_field :image, id: 'image' %>
-        <%= f.submit %>
+        <%= f.submit(:class => 'enter') %>
       <% end %>
-    </div>
+  </div>
 <div class="container">
   <div class="row">
 <!--
@@ -78,7 +78,6 @@
 
         <% @user.squeaks.order(:created_at).reverse.each do |squeak| %>
           <div class="row">
-
             <div class="three columns">
               <%= squeak.message %>
             </div>
@@ -92,7 +91,6 @@
                 <%= submit_tag "UnSqueak", :class => "delete"%><br>
               <% end %>
             </div>
-
           </div>
         <% end %>
       </ul>
