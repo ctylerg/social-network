@@ -2,11 +2,11 @@
 <body id='profilePage'>
   <div class="row">
 <nav class = "twelve columns profileNav"
-
+      <li>
         <%= form_tag('/log_out', method: :delete) do %>
-        <% submit_tag "Log-Out", :class => "profileLogOut" %>
+        <%= submit_tag "Log-Out", :class => "profileLogOut" %>
         <% end %>
-
+      </li>
       <p>
         YOU ARE NOW SIGNED IN to Squeaker
       </p>

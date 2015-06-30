@@ -9,3 +9,14 @@
   <%= password_field_tag :password %>
   <%= submit_tag "Log-In", :class => "enter" %>
 <% end %>
+
+<br>
+
+<%= form_for User.new do |f| %>
+
+  <%= f.text_field :username, :placeholder => :username %>
+  <%= f.password_field :password, :placeholder => :password %>
+  <%= f.password_field :password_confirmation, :placeholder => :confirm_password %>
+  <%= f.submit(:class => 'enter') %>
+
+<% end %>
