@@ -5,8 +5,8 @@ Rails.application.routes.draw do
   get '/sign_in' => 'users#sign_in'
   get '/profile' => 'users#profile'
 
-  #post '/squeaks' => 'squeaks#create'
-  #delete '/squeaks/:id' => 'squeaks#destroy'
+  post '/squeaks' => 'squeaks#create'
+  delete '/squeaks/:id' => 'squeaks#destroy'
 
   post '/log_in' => 'sessions#log_in'
   delete '/log_out' => 'sessions#log_out'
