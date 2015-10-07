@@ -8,6 +8,7 @@
 </div>
 
 <h1>Welcome to Squeaker</h1>
+<h2>The unsename or password was incorrect</h2>
 <h2>Please Sign-In</h2>
 
 <!-- Form tag = basic form -->
@@ -18,15 +19,3 @@
   <%= password_field_tag :password %>
   <%= submit_tag "Log-In", :class => "enter" %>
 <% end %>
-
-<br><br>
-<!-- <h2>If you have not signed in before please sign-up</h2> -->
-<!-- Form_for = a specific model -->
-<!-- <%= form_for User.new do |f| %>
-
-  <%= f.text_field :username, :placeholder => :username %>
-  <%= f.password_field :password, :placeholder => :password %>
-  <%= f.password_field :password_confirmation, :placeholder => :confirm_password %>
-  <%= f.submit(:class => 'enter') %>
-
-<% end %> -->

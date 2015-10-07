@@ -11,6 +11,8 @@ Rails.application.routes.draw do
   post '/log_in' => 'sessions#log_in'
   delete '/log_out' => 'sessions#log_out'
 
+  get '/sign_in2' => 'users#sign_in2'
+
   resources :squeaks, only: [:create, :destroy]
 
   # The priority is based upon order of creation: first created -> highest priority.

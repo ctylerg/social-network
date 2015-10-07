@@ -1,9 +1,9 @@
 <%= form_for @user do |f|%>
   <%= f.label :username %>
-  <%= f.text_field :username %>
+  <%= f.text_field :username, :placeholder => :username  %>
 
   <%= f.label :password %>
-  <%= f.password_field :password %>
+  <%= f.password_field :password, :placeholder => :'7-20 Characters long' %>
 
-  <%= f.submit %>
+  <%= f.submit(:class => 'enter')%>
 <% end %>
