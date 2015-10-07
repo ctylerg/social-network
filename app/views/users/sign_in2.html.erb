@@ -1,21 +1,25 @@
 <meta name="viewport" content="width=550, initial-scale=1">
-<div class="container">
-  <div class="row">
-    <div class="twelve column">
-        <%= render partial: 'navigation'%>
+    <div class="container">
+      <div class="row">
+        <div class="twelve column">
+            <%= render partial: 'navigation'%>
+        </div>
+      </div>
     </div>
-  </div>
-</div>
 
-<h1>Welcome to Squeaker</h1>
-<h2>The unsename or password was incorrect</h2>
-<h2>Please Sign-In</h2>
+    <!-- Div is for mouse background -->
+    <div class="my-container">
+    </div>
 
-<!-- Form tag = basic form -->
-<%= form_tag('/log_in', method: :post) do %>
-  <%= label_tag :username %>
-  <%= text_field_tag :username %>
-  <%= label_tag :password %>
-  <%= password_field_tag :password %>
-  <%= submit_tag "Log-In", :class => "enter" %>
-<% end %>
+    <h1>Welcome To Squeaker</h1>
+    <h2 id="retry">THE USERNAME OR PASSWORD WAS INCORRECT</h2>
+    <h2>Please Sign-In Again</h2>
+
+    <!-- Form tag = basic form -->
+    <%= form_tag('/log_in', method: :post) do %>
+      <%= label_tag :username %>
+      <%= text_field_tag :username %>
+      <%= label_tag :password %>
+      <%= password_field_tag :password %>
+      <%= submit_tag "Log-In", :class => "enter" %>
+    <% end %>

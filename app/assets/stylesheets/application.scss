@@ -23,11 +23,32 @@
   background-color: grey !important;
 }
 
+.my-container:after {
+    content: ' ';
+    display: block;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    opacity: 0.05;
+    background-image: url('mouse.jpg');
+    background-repeat: no-repeat;
+    background-position: 50% 0;
+    -ms-background-size: cover;
+    -o-background-size: cover;
+    -moz-background-size: cover;
+    -webkit-background-size: cover;
+    background-size: cover;
+    pointer-events: none;
+}
+
 body {
-  // background-image: url('http://wall4all.me/thumbs/cars/mc-escher-birds-885377-480x320.jpg');
   background-repeat: no-repeat;
   background-size: cover;
   background-color: darkgrey;
+
 }
 .enter {
   color: lightblue !important;
@@ -62,7 +83,9 @@ h5 {
 
 
 }
-
+#retry {
+  font-style: italic;
+}
 .delete {
   color: lightblue !important;
   background-color: grey !important;

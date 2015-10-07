@@ -1,25 +1,30 @@
 <meta name="viewport" content="width=550, initial-scale=1">
-<div class="container">
-  <div class="row">
-    <div class="twelve column">
-        <%= render partial: 'navigation'%>
+    <div class="container">
+      <div class="row">
+        <div class="twelve column">
+            <%= render partial: 'navigation'%>
+
+        </div>
+      </div>
     </div>
-  </div>
-</div>
+    
+    <!-- Div is for mouse background -->
+    <div class="my-container">
+    </div>
 
-<h1>Welcome to Squeaker</h1>
-<h2>Please Sign-In</h2>
+    <h1>Welcome to Squeaker</h1>
+    <h2>Please Sign-In</h2>
 
-<!-- Form tag = basic form -->
-<%= form_tag('/log_in', method: :post) do %>
-  <%= label_tag :username %>
-  <%= text_field_tag :username %>
-  <%= label_tag :password %>
-  <%= password_field_tag :password %>
-  <%= submit_tag "Log-In", :class => "enter" %>
-<% end %>
+    <!-- Form tag = basic form -->
+    <%= form_tag('/log_in', method: :post) do %>
+      <%= label_tag :username %>
+      <%= text_field_tag :username %>
+      <%= label_tag :password %>
+      <%= password_field_tag :password %>
+      <%= submit_tag "Log-In", :class => "enter" %>
+    <% end %>
 
-<br><br>
+<!-- <br><br> -->
 <!-- <h2>If you have not signed in before please sign-up</h2> -->
 <!-- Form_for = a specific model -->
 <!-- <%= form_for User.new do |f| %>
