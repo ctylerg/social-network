@@ -71,8 +71,8 @@
       </div> -->
 
   <div class="container">
-    <!-- <div class="row"> -->
-      <div class="three-fourths column">
+    <div class="row">
+      <div class="ten columns">
         <ul>
           <% @user.squeaks.order(:created_at).reverse.each do |squeak| %>
           <div class="row">
@@ -93,9 +93,17 @@
           <% end %>
         </ul>
       </div>
-    <!-- </div> -->
-    <div class="one-fourth column">
-      <p>sdlhjfkdsj hflkdshflkhdskdfhlks hkjfhdlkhfkhdlkjsahflkjds</p>
+
+      <div class="two columns">
+        <h6 id="advert">Click our sponsors</h6>
+        <%= link_to 'http://ctylerg.github.io/', :target => "_blank" do %>
+        <%= image_tag('Tyler ad.png', width: 300, height: 400,:alt => 'Tyler ad.png') %>
+        <% end %>
+        <br><br><br>
+        <%= link_to 'https://generalassemb.ly/', :target => "_blank" do %>
+        <%= image_tag("GAadvert2.png", width: 300, height: 400, :alt => "GAadvert.png") %>
+        <% end %>
+      </div>
     </div>
   </div>
 
